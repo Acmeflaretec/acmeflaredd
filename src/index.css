@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #000;
+  color: #fff;
+}
+
+canvas {
+  touch-action: none;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #fff, #4338ca);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(67, 56, 202, 0.1);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4338ca;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3730a3;
+}
+
+@keyframes gradient-x {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+@keyframes gradient-x-reverse {
+  0% { background-position: 100% 50% }
+  50% { background-position: 0% 50% }
+  100% { background-position: 100% 50% }
+}
+
+.animate-gradient-x {
+  background-size: 200% auto;
+  animation: gradient-x 5s ease infinite;
+}
+
+.animate-gradient-x-reverse {
+  background-size: 200% auto;
+  animation: gradient-x-reverse 5s ease infinite;
+}
+
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
+
+@layer base {
+  html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  #root {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+/* Add perspective for 3D effects */
+.scroll-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
