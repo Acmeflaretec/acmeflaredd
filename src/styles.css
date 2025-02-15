@@ -1,0 +1,24 @@
+.focus-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--x) var(--y),
+    transparent 10%,
+    rgba(0, 0, 0, 0.95) 20%
+  );
+  z-index: 100;
+  transition: background 0.3s ease;
+}
+
+section {
+  position: relative;
+  z-index: 101;
+  min-height: 100vh;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+} 
