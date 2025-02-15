@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Code, Rocket, Smartphone, BrainCircuit, Star, ShieldCheck, Users, LayoutTemplate, MessageSquare, Camera, Server, Cloud, ArrowRight, Building, Paintbrush, Briefcase, Shield, Globe, Clock, Zap, Award, TrendingUp, Puzzle } from 'lucide-react';
 import { useWindowSize } from "./hooks/useWindowSize";
-import logo from "./public/images/1e293b11.png"
+import logo from "../public/images/1e293b11.png"
 
 function App() {
   const [width, height] = useWindowSize();
