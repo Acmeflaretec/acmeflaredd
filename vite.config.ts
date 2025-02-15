@@ -13,6 +13,9 @@ export default defineConfig({
     hmr: {
       protocol: 'ws',
       host: 'localhost'
+    },
+    headers: {
+      'Content-Type': 'application/javascript'
     }
   },
   build: {
